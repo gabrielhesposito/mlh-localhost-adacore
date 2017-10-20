@@ -74,6 +74,11 @@ begin
             else
                Put_Line ("Nothing to Pop, Stack is empty!");
             end if;
+         elsif S = 'T' then
+            if not Stack.Empty then
+               Stack.pop(S);
+               Put_Line ("Peek Top: " & S);
+               end if;
          else
             if not Stack.Full then
                Stack.Push (S);
